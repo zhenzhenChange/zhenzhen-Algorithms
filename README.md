@@ -4,7 +4,16 @@ Introduction to Algorithms and LeetCode
 
 ## Introduction to Algorithms
 
+- PriorityQueue
+
+  - MaximumPriorityQueue
+
+- DivideAndConquer
+
+  - FindMaximumSubArray
+
 - SortingAlgorithms
+  - HeapSort
   - MergeSort
   - InsertionSort
 
