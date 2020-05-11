@@ -15,7 +15,9 @@ Introduction to Algorithms and LeetCode
 - SortingAlgorithms
   - HeapSort
   - MergeSort
+  - QuickSort
   - InsertionSort
+  - RandomizedQuickSort
 
 ## LeetCode
 
