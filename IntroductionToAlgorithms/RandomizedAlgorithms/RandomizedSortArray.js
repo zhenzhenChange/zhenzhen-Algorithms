@@ -4,7 +4,7 @@
  * @param {*} sequence
  * @returns {void}
  */
-function RandomArray(sequence) {
+function RandomizedSortArray(sequence) {
   const length = sequence.length;
 
   const idxSet = [...RandomIndex(0, length)];

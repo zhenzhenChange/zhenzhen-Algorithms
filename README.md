@@ -18,7 +18,6 @@ Introduction to Algorithms and LeetCode
   - QuickSort
   - MergeSort
   - InsertionSort
-  - RandomizedQuickSort
 
 - DivideAndConquer
 
@@ -26,7 +25,9 @@ Introduction to Algorithms and LeetCode
 
 - RandomizedAlgorithms
 
-  - RandomArray
+  - Shuffle
+  - RandomizedSortArray
+  - RandomizedQuickSort
 
 ## LeetCode
 
