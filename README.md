@@ -15,9 +15,12 @@ Introduction to Algorithms and LeetCode
 - SortingAlgorithms
 
   - HeapSort
+  - RadixSort
   - QuickSort
   - MergeSort
+  - BucketSort
   - InsertionSort
+  - CountingSort
 
 - DivideAndConquer
 
@@ -45,4 +48,5 @@ Introduction to Algorithms and LeetCode
 ## TODO
 
 - Strassen
+- RadixSort (待优化)
 - MaximumPriorityQueue (待完善)
