@@ -26,6 +26,14 @@ Introduction to Algorithms and LeetCode
 
   - FindMaximumSubArray
 
+- DynamicProgramming
+
+  - MaximizationProblem
+    - CutRod
+    - BottomUpCutRod
+    - MemoizedCutRod
+    - ExtendedBottomUpCutRod
+
 - RandomizedAlgorithms
 
   - Shuffle
