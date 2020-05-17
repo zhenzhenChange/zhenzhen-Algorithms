@@ -4,6 +4,12 @@ Introduction to Algorithms and LeetCode
 
 ## Introduction to Algorithms
 
+- DataStructure
+
+  - Stack
+  - Queue
+  - LinkedList
+
 - PriorityQueue
 
   - MaximumPriorityQueue
