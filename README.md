@@ -9,6 +9,7 @@ Introduction to Algorithms and LeetCode
   - Stack
   - Queue
   - LinkedList
+  - BinarySearchTree
   - DirectAddressTable
 
 - PriorityQueue
