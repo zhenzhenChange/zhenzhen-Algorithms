@@ -1,6 +1,8 @@
 # zhenzhen-Algorithms
 
-Introduction to Algorithms and LeetCode
+Introduction To Algorithms And LeetCode
+
+---
 
 ## Introduction to Algorithms
 
@@ -9,6 +11,7 @@ Introduction to Algorithms and LeetCode
   - Stack
   - Queue
   - LinkedList
+  - RedBlackTree
   - BinarySearchTree
   - DirectAddressTable
 
@@ -48,6 +51,8 @@ Introduction to Algorithms and LeetCode
   - RandomizedSortArray
   - RandomizedQuickSort
 
+---
+
 ## LeetCode
 
 - DailyRandom
@@ -61,8 +66,29 @@ Introduction to Algorithms and LeetCode
 
 - OneQuestionADay (5 月)
 
+---
+
 ## TODO
 
 - Strassen
 - RadixSort (待优化)
 - MaximumPriorityQueue (待完善)
+
+---
+
+## Stage
+
+- Stage - 1 (On The Way ...)
+
+  - LeetCode 卡片探索
+  - LeetCode 每日一题
+  - 将《算法导论》中各种算法的伪代码用 JavaScript 实现
+
+- Stage - 2
+
+  - LeetCode 专题冲刺
+  - 尽可能的解出《算法导论》的练习题与思考题
+
+- Stage - 3
+
+  - 算法的分析与证明
