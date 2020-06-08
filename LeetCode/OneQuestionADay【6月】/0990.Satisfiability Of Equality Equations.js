@@ -1,6 +1,6 @@
 /**
  * 并查集
- * 
+ *
  * 时间复杂度：O(n + C log C)
  * 时间复杂度：O(C)
  *
@@ -12,16 +12,16 @@ var equationsPossible = function (equations) {
   const parents = new Array(26).fill(-1);
 
   for (const [charX, charL, charR, charY] of equations) {
-    if (charL == "=") unionFind(charX.charCodeAt() - 97, charY.charCodeAt() - 97);
+    if (charL == "=") union(charX.charCodeAt() - 97, charY.charCodeAt() - 97);
   }
 
   for (const [charX, charL, charR, charY] of equations) {
-    if (charL == "!" && findRoot(charX.charCodeAt() - 97) == findRoot(charY.charCodeAt() - 97)) return false;
+    if (charL == "!" && find(charX.charCodeAt() - 97) == find(charY.charCodeAt() - 97)) return false;
   }
 
   return true;
 
-  function findRoot(node) {
+  function find(node) {
     let nodeRoot = node;
 
     while (parents[nodeRoot] != -1) nodeRoot = parents[nodeRoot];
@@ -29,19 +29,20 @@ var equationsPossible = function (equations) {
     return nodeRoot;
   }
 
-  function unionFind(x, y) {
-    const xRoot = findRoot(x);
-    const yRoot = findRoot(y);
+  function union(x, y) {
+    const XRoot = find(x);
+    const YRoot = find(y);
 
-    if (xRoot == yRoot) return;
+    if (XRoot == YRoot) return;
 
-    if (ranks[xRoot] > ranks[yRoot]) {
-      parents[yRoot] = xRoot;
-    } else if (ranks[xRoot] < ranks[yRoot]) {
-      parents[xRoot] = yRoot;
+    const XRanks = ranks[XRoot];
+    const YRanks = ranks[YRoot];
+
+    if (XRanks > YRanks) {
+      parents[YRoot] = XRoot;
     } else {
-      parents[yRoot] = xRoot;
-      ranks[xRoot]++;
+      parents[XRoot] = YRoot;
+      if (XRanks == YRanks) ranks[YRoot]++;
     }
   }
 };
