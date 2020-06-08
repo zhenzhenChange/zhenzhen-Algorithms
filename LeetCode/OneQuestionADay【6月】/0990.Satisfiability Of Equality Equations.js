@@ -26,8 +26,16 @@ var equationsPossible = function (equations) {
 
   function find(node) {
     // 父级等于自身，自身就是根。否则递归且将自己的父级直接指向根（回溯）
-    // 路径压缩
-    return parents[node] == node ? node : (parents[node] = find(parents[node]));
+    // 路径压缩（完全压缩）
+    // return parents[node] == node ? node : (parents[node] = find(parents[node]));
+
+    // 路径压缩（隔代压缩）
+    while (node != parents[node]) {
+      parents[node] = parents[parents[node]];
+      node = parents[node];
+    }
+
+    return node;
   }
 
   function union(x, y) {
@@ -46,6 +54,9 @@ var equationsPossible = function (equations) {
       parents[XRoot] = YRoot;
       if (XRanks == YRanks) ranks[YRoot]++;
     }
+
+    // 非按秩合并
+    // parents[XRoot] = YRoot;
   }
 };
 
