@@ -1,5 +1,5 @@
 /**
- * 并查集
+ * 并查集（按秩合并+路径压缩）
  *
  * 时间复杂度：O(n + C log C)
  * 时间复杂度：O(C)
@@ -9,7 +9,10 @@
  */
 var equationsPossible = function (equations) {
   const ranks = new Array(26).fill(0);
-  const parents = new Array(26).fill(-1);
+  const parents = new Array(26);
+
+  // 初始化父级为自身
+  for (let i = 0; i < 26; i++) parents[i] = i;
 
   for (const [charX, charL, charR, charY] of equations) {
     if (charL == "=") union(charX.charCodeAt() - 97, charY.charCodeAt() - 97);
@@ -22,11 +25,9 @@ var equationsPossible = function (equations) {
   return true;
 
   function find(node) {
-    let nodeRoot = node;
-
-    while (parents[nodeRoot] != -1) nodeRoot = parents[nodeRoot];
-
-    return nodeRoot;
+    // 父级等于自身，自身就是根。否则递归且将自己的父级直接指向根（回溯）
+    // 路径压缩
+    return parents[node] == node ? node : (parents[node] = find(parents[node]));
   }
 
   function union(x, y) {
@@ -38,6 +39,7 @@ var equationsPossible = function (equations) {
     const XRanks = ranks[XRoot];
     const YRanks = ranks[YRoot];
 
+    // 按秩合并
     if (XRanks > YRanks) {
       parents[YRoot] = XRoot;
     } else {
