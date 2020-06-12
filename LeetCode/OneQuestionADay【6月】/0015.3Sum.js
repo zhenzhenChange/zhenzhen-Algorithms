@@ -1,5 +1,6 @@
 /**
- * 三数之和
+ * 时间复杂度：O(n ^ 2)
+ * 空间复杂度：O(log n)
  *
  * @param {number[]} nums
  * @return {number[][]}
